@@ -1,0 +1,315 @@
+body {
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  margin-right: 25px;
+}
+
+#primero {
+  font-size: 30px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista {
+  display: flex;
+}
+
+.titular {
+  text-align: center;
+  margin-top: 200px;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+a {
+  font-size: 14px;
+  background: #5cb8ff;
+  padding: 20px 30px 20px 30px;
+  color: white;
+}
+
+header {
+  background: url(fondo.jpg);
+  height: 114vh;
+  background-size: cover;
+}
+
+.contenedor {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+}
+
+/* ARRANCA SECCION SOBRE MI */
+
+h3 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+.contenedor-sobremi {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor-parrafo-y-boton {
+  width: 42%;
+}
+
+.contenedor-parrafo-y-boton p {
+  font-size: 18px;
+}
+
+.parrafo-final {
+  margin-bottom: 30px;
+}
+
+.contenedor-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.servicio {
+  width: 25%;
+  padding: 50px 38px 50px 38px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.violeta {
+  background: #5055df;
+}
+
+.celeste {
+  background: #40a8fa;
+}
+
+.servicio h4 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.servicio img {
+  float: right;
+}
+
+.servicio p {
+  font-size: 18px;
+}
+
+span {
+  font-size: 80px;
+  color: blue;
+}
+
+.owl-nav {
+  text-align: center;
+}
+
+.contenedor-porque {
+  display: flex;
+  text-align: center;
+}
+
+.contenedor-porque h4 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.contenedor-porque p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.porque-singular {
+  width: 28%;
+}
+
+#blog {
+  background: #F9FAFC;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contenedor-publicaciones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.publicacion {
+  width: 30%;
+  box-shadow: 1px 1px 14px #ccc;
+}
+
+#blog img {
+  width: 100%;
+}
+
+#blog h4 {
+  font-size: 23px;
+  margin: 0;
+  padding: 20px;
+}
+
+#blog p {
+  color: #5A6169;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 10px 20px 20px 20px;
+  margin: 0;
+}
+
+#blog a {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.publicacion-segunda {
+  height: 245px;
+}
+
+.primer-parrafo {
+  padding: 0px 20px 20px 20px;
+}
+
+#que-esperas {
+  background: linear-gradient(rgb(84,93,220),rgb(96,171,245));
+  text-align: center;
+  padding: 50px 0 50px 0;
+}
+
+#que-esperas h3 {
+  font-size: 23px;
+  color: #fff;
+}
+
+#que-esperas a {
+  padding: 15px 45px 15px 45px;
+}
+
+#que-esperas a:hover {
+  color: black;
+  transition: 1s;
+  transform: rotate(360deg);
+  display: inline-block;
+}
+
+#whatsapp a {
+  background: none;
+  position: fixed;
+  top: 85px;
+  right: 15px;
+}
+
+@media (max-width: 800px) {
+
+  nav{
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    background: #5cb8ff;
+    width: 100%;
+    display: none;
+  }
+
+  nav .lista {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 25px;
+  }
+
+  .titular {
+    margin-top: 54px;
+  }
+
+  h1 {
+    font-size: 49px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .contendor-sobremi {
+    flex-direction: column;
+  }
+
+  .contenedor-parrafo-y-boton {
+    width: 90%
+  }
+
+  .contenedor-servicios {
+    flex-direction: column;
+  }
+
+  .servicio {
+    width: 72%;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .contendor-porque {
+    flex-direction: column;
+  }
+
+  .contenedor-publicaciones {
+    flex-direction: column;
+  }
+
+  .publicacion {
+    width: 85%;
+    margin: auto;
+  }
+
+  .imagen-sobremi {
+    width: 90%;
+  }
+}
+
+@media (min-width: 700px) and
+(max-width: 900px) {
+  header {
+    height: 53vh;
+  }
+
+  .ima-sobremi {
+    width: 50%;
+  }
+
+  .servicio {
+    width: 44%;
+  }
+
+  .publicacion {
+    width: 62%;
+  }
+}
