@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cafetería — Ejercicio Básico</title>
+</head>
+<body>
+
+  <header>
+	<h1>Cafetería</h1>
+	<nav>
+	  <a href="#sobre">Sobre</a> |
+	  <a href="#contacto">Contáctanos</a> |
+	  <a href="#menu">Menú</a>
+	</nav>
+  </header>
+
+  <main>
+	<section id="sobre">
+	  <h2>Sobre la cafetería</h2>
+	  <p>Bienvenidos. Café de origen y pastelería fresca.</p>
+	</section>
+
+	<!-- 1) Contáctanos (formulario simple) -->
+	<section id="contacto">
+	  <h2>Contáctanos</h2>
+
+	  <form>
+		<fieldset>
+		  <legend>Datos de contacto</legend>
+
+		  <label for="nombre">Nombre:</label>
+		  <input id="nombre" name="nombre" type="text" required>
+
+		  <br>
+
+		  <label for="email">Email:</label>
+		  <input id="email" name="email" type="email" required>
+
+		  <br>
+
+		  <label for="tel">Teléfono:</label>
+		  <input id="tel" name="tel" type="tel">
+		</fieldset>
+
+		<fieldset>
+		  <legend>Consulta</legend>
+
+		  <label for="tipo">Tipo de consulta:</label>
+		  <select id="tipo" name="tipo" required>
+			<option value="" selected disabled>Selecciona</option>
+			<option>Reservas</option>
+			<option>Eventos</option>
+			<option>Comentarios</option>
+			<option>Otro</option>
+		  </select>
+
+		  <br>
+
+		  <label for="mensaje">Mensaje:</label><br>
+		  <textarea id="mensaje" name="mensaje" required></textarea>
+
+		  <br>
+
+		  <label>
+			<input type="checkbox" required>
+			Acepto la política de privacidad
+		  </label>
+
+		  <br><br>
+
+		  <button type="submit">Enviar</button>
+		  <button type="reset">Limpiar</button>
+		</fieldset>
+	  </form>
+	</section>
+
+	<!-- 2) Menú con tabla sencilla -->
+	<section id="menu">
+	  <h2>Menú</h2>
+
+	  <table border="1">
+		<caption>Menú de la cafetería</caption>
+		<thead>
+		  <tr>
+			<th>Producto</th>
+			<th>Descripción</th>
+			<th>Precio</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<th colspan="3">Bebidas calientes</th>
+		  </tr>
+		  <tr>
+			<td>Espresso</td>
+			<td>Shot de café intenso</td>
+			<td>$6.500</td>
+		  </tr>
+		  <tr>
+			<td>Capuchino</td>
+			<td>Café con leche y espuma</td>
+			<td>$8.500</td>
+		  </tr>
+
+		  <tr>
+			<th colspan="3">Postres</th>
+		  </tr>
+		  <tr>
+			<td>Brownie</td>
+			<td>Chocolate con nueces</td>
+			<td>$7.500</td>
+		  </tr>
+		  <tr>
+			<td>Cheesecake</td>
+			<td>Con salsa de frutos rojos</td>
+			<td>$9.500</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</section>
+  </main>
+
+  <footer>
+	<p>© 2025 Cafetería</p>
+  </footer>
+
+</body>
+</html>
