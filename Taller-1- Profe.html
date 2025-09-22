@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demostración Completa De HTML5 - Tablas y Formularios</title>
+	<meta name="description"
+		content="Una página de ejemplo que demuestra todos los conceptos de HTML5 aprendidos de la presentación, sin usar CSS ni JavaScript.">
+	<meta name="author" content="Brian">
+	<meta name="keywords" content="html5, semantica, accesibilidad, desarrollo web, tablas, formularios, validacion">
+	<meta property="og:title" content="Página de Ejemplo Completa - HTML5">
+	<meta property="og:description"
+		content="Demostración de estructura, semántica, tablas, formularios y validación en HTML5.">
+</head>
+
+<body>
+
+	<header>
+		<img src="placeholder.jpg" alt="Logo del sitio" width="60" height="60">
+		<h1>Mi Sitio Web Semántico</h1>
+		<nav>
+			<ul>
+				<li><a href="#inicio">Inicio</a></li>
+				<li><a href="#tablas">Demostración de Tablas</a></li>
+				<li><a href="#formularios">Demostración de Formularios</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+		<section id="inicio">
+			<h2>Bienvenidos a Nuestra Página Demostrativa</h2>
+			<article>
+				<header>
+					<h3>La Importancia de la Semántica en HTML5</h3>
+					<p>Publicado el <time datetime="2025-09-17">17 de septiembre de 2025</time></p>
+				</header>
+				<p>
+					El uso de etiquetas semánticas hace que el código sea más legible, mantenible y accesible.
+					En este texto, <mark>esta parte es muy importante</mark> para entender el concepto.
+				</p>
+				<figure>
+					<img src="placeholder.jpg" alt="Diagrama de la estructura semántica de una página HTML5" width="600"
+						height="400">
+					<figcaption>Fig. 1: Estructura de una página con etiquetas semánticas.</figcaption>
+				</figure>
+				<details>
+					<summary>Haz clic para ver más sobre los beneficios</summary>
+					<ul>
+						<li><strong>Accesibilidad:</strong> Los lectores de pantalla interpretan mejor el contenido.
+						</li>
+						<li><strong>SEO:</strong> Los motores de búsqueda entienden mejor la estructura.</li>
+						<li><strong>Mantenibilidad:</strong> El código es más fácil de leer y mantener.</li>
+					</ul>
+				</details>
+			</article>
+		</section>
+
+		<hr>
+
+		<section id="tablas">
+			<h2>Demostración de Tablas HTML5 (Menú de Cafetería)</h2>
+			<p>Esta tabla demuestra todos los conceptos clave: estructura semántica, combinación de celdas y atributos
+				de accesibilidad.</p>
+
+			<table border="1">
+				<caption>Menú de Nuestra Cafetería</caption>
+
+				<thead>
+					<tr>
+						<th id="producto" scope="col">Producto</th>
+						<th id="descripcion" scope="col">Descripción</th>
+						<th id="precio-peq" scope="col">Precio Pequeño</th>
+						<th id="precio-gra" scope="col">Precio Grande</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th colspan="4" scope="colgroup">Bebidas Calientes</th>
+					</tr>
+					<tr>
+						<td headers="producto">Café Americano</td>
+						<td headers="descripcion">Café negro filtrado.</td>
+						<td headers="precio-peq">$2.00</td>
+						<td headers="precio-gra">$3.00</td>
+					</tr>
+					<tr>
+						<td headers="producto">Capuchino</td>
+						<td headers="descripcion">Espresso con leche vaporizada y espuma.</td>
+						<td headers="precio-peq">$3.50</td>
+						<td headers="precio-gra">$4.50</td>
+					</tr>
+
+					<tr>
+						<th rowspan="2" scope="rowgroup">Postres y Snacks</th>
+						<td headers="producto descripcion">Croissant de Mantequilla</td>
+						<td headers="precio-peq" colspan="2">Precio Único: $2.50</td>
+					</tr>
+					<tr>
+						<td headers="producto descripcion">Torta de Chocolate</td>
+						<td headers="precio-peq" colspan="2">Precio Único: $4.00</td>
+					</tr>
+				</tbody>
+
+				<tfoot>
+					<tr>
+						<th colspan="3" scope="row">Descuento del día en bebidas grandes:</th>
+						<td>-10%</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+
+		<hr>
+
+		<section id="formularios">
+			<h2>Demostración de Formularios HTML5</h2>
+
+			<article>
+				<h3>Formulario de Búsqueda (usa GET)</h3>
+				<p>Este formulario usa <code>method="GET"</code> para que la búsqueda aparezca en la URL.</p>
+				<form action="/search" method="GET">
+					<label for="searchQuery">Buscar productos:</label>
+					<input type="search" id="searchQuery" name="q" placeholder="Ej: Café orgánico...">
+					<button type="submit">Buscar</button>
+				</form>
+			</article>
+
+			<article>
+				<h3>Formulario de Contacto y Pedido (usa POST)</h3>
+				<p>Este es un formulario completo que integra validación, agrupación de campos y múltiples tipos de
+					entrada.</p>
+
+				<form action="/procesar-datos" method="post" autocomplete="on" enctype="multipart/form-data">
+
+					<fieldset>
+						<legend>Datos Personales</legend>
+
+						<p>
+							<label for="nombre">Nombre Completo:</label><br>
+							<input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50"
+								placeholder="Escribe tu nombre aquí" autofocus>
+						</p>
+
+						<p>
+							<label for="email">Correo Electrónico:</label><br>
+							<input type="email" id="email" name="email" required placeholder="tu@correo.com">
+						</p>
+
+						<p>
+							<label for="telefono">Teléfono (formato: +34-123-456-789):</label><br>
+							<input type="tel" id="telefono" name="telefono" required pattern="\+\d{2}-\d{3}-\d{3}-\d{3}"
+								title="El formato debe ser +XX-XXX-XXX-XXX">
+						</p>
+
+						<p>
+							<label for="password">Crear Contraseña:</label><br>
+							<input type="password" id="password" name="password" required
+								pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+								title="Debe contener al menos un número, una mayúscula, una minúscula y 8 o más caracteres.">
+						</p>
+
+						<p>
+							<label for="edad">Edad (entre 18 y 99):</label><br>
+							<input type="number" id="edad" name="edad" min="18" max="99">
+						</p>
+					</fieldset>
+
+					<fieldset>
+						<legend>Detalles de tu Consulta</legend>
+
+						<p>
+							<label for="consulta">Tipo de Consulta:</label><br>
+							<select id="consulta" name="consulta" required>
+								<option value="">-- Selecciona una opción --</option>
+								<optgroup label="Consultas Generales">
+									<option value="info">Solicitar Información</option>
+									<option value="sugerencia">Enviar Sugerencia</option>
+								</optgroup>
+								<optgroup label="Pedidos">
+									<option value="domicilio">Pedido a Domicilio</option>
+									<option value="recoger">Pedido para Recoger</option>
+								</optgroup>
+							</select>
+						</p>
+
+						<p>
+							<label for="mensaje">Tu Mensaje:</label><br>
+							<textarea id="mensaje" name="mensaje" rows="5" cols="40"
+								placeholder="Escribe tu mensaje aquí..."></textarea>
+						</p>
+
+						<p>
+							Intereses:<br>
+							<input type="checkbox" id="interes_cafe" name="intereses" value="cafe">
+							<label for="interes_cafe">Cafés</label>
+							<input type="checkbox" id="interes_postres" name="intereses" value="postres">
+							<label for="interes_postres">Postres</label>
+							<input type="checkbox" id="interes_eventos" name="intereses" value="eventos">
+							<label for="interes_eventos">Eventos</label>
+						</p>
+
+						<p>
+							Nivel de Experiencia como Barista:<br>
+							<input type="radio" id="exp_principiante" name="experiencia" value="principiante" required>
+							<label for="exp_principiante">Principiante</label>
+							<input type="radio" id="exp_intermedio" name="experiencia" value="intermedio">
+							<label for="exp_intermedio">Intermedio</label>
+							<input type="radio" id="exp_avanzado" name="experiencia" value="avanzado">
+							<label for="exp_avanzado">Avanzado</label>
+						</p>
+					</fieldset>
+
+					<fieldset>
+						<legend>Entradas Avanzadas y Archivos</legend>
+
+						<p><label for="cita-fecha">Fecha de la Cita: </label><input type="date" id="cita-fecha"
+								name="cita-fecha"></p>
+						<p><label for="cita-hora">Hora de la Cita: </label><input type="time" id="cita-hora"
+								name="cita-hora"></p>
+						<p><label for="evento-datetime">Fecha y Hora del Evento: </label><input type="datetime-local"
+								id="evento-datetime" name="evento-datetime"></p>
+						<p><label for="mes-facturacion">Mes de Facturación: </label><input type="month"
+								id="mes-facturacion" name="mes-facturacion"></p>
+						<p><label for="semana-proyecto">Semana del Proyecto: </label><input type="week"
+								id="semana-proyecto" name="semana-proyecto"></p>
+						<p><label for="color-favorito">Color Favorito: </label><input type="color" id="color-favorito"
+								name="color-favorito"></p>
+						<p><label for="satisfaccion">Nivel de Satisfacción (0-10): </label>0 <input type="range"
+								id="satisfaccion" name="satisfaccion" min="0" max="10"> 10</p>
+						<p><label for="website">Tu Sitio Web: </label><input type="url" id="website" name="website"
+								placeholder="https://ejemplo.com"></p>
+
+						<p>
+							<label for="frutas-input">Elige tu fruta favorita (con sugerencias):</label><br>
+							<input list="frutas" id="frutas-input" name="fruta">
+							<datalist id="frutas">
+								<option value="Manzana">
+								<option value="Banana">
+								<option value="Cereza">
+								<option value="Fresa">
+							</datalist>
+						</p>
+
+						<p>
+							<label for="documento">Sube un único documento (PDF o DOC):</label><br>
+							<input type="file" id="documento" name="documento" accept=".pdf,.doc,.docx">
+						</p>
+
+						<p>
+							<label for="fotos">Sube múltiples imágenes:</label><br>
+							<input type="file" id="fotos" name="fotos[]" accept="image/*" multiple>
+						</p>
+					</fieldset>
+
+					<p>
+						<input type="checkbox" id="privacidad" name="privacidad" required>
+						<label for="privacidad">Acepto la política de privacidad.</label>
+					</p>
+
+					<p>
+						<button type="submit">Enviar Pedido</button>
+						<button type="reset">Limpiar Formulario</button>
+						<button type="button" onclick="alert('Esta acción necesitaría JavaScript.')">Más
+							Información</button>
+					</p>
+				</form>
+			</article>
+
+			<article>
+				<h3>Formulario con Validación Desactivada (novalidate)</h3>
+				<p>Este formulario tiene el atributo <code>novalidate</code>, por lo que el navegador no comprobará los
+					campos antes de enviar.</p>
+				<form action="/guardar-borrador" method="post" novalidate>
+					<label for="borrador-email">Email (requerido, pero no se validará):</label>
+					<input type="email" id="borrador-email" name="borrador-email" required>
+					<button type="submit">Guardar Borrador</button>
+				</form>
+			</article>
+		</section>
+
+		<table border="1">
+			<caption>Horarios de Clase</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th scope="col">Lunes</th>
+					<th scope="col">Martes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">09:00</th>
+					<td>Matemáticas</td>
+					<td>Historia</td>
+				</tr>
+				<tr>
+					<th scope="row">10:00</th>
+					<td>Ciencia</td>
+					<td>Arte</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+
+	<footer>
+		<hr>
+		<p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+		<p>
+			<a href="#privacidad">Política de Privacidad</a> |
+			<a href="#terminos">Términos de Servicio</a>
+		</p>
+	</footer>
+
+</body>
+
+</html>
