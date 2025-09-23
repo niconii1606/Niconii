@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - Nicolas Montejo</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.5; }
+    header, main { max-width: 900px; margin: 0 auto; padding: 1rem; }
+    nav a { margin-right: 1rem; color: #2563eb; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    form { display: grid; gap: 1rem; max-width: 600px; margin-top: 1rem; }
+    label { font-weight: 600; display: inline-block; margin-bottom: 0.25rem; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%; padding: 0.6rem; border: 1px solid #d1d5db; border-radius: 6px;
+    }
+    button {
+      padding: 0.6rem 1rem; border: 0; border-radius: 8px;
+      background: #2563eb; color: #fff; cursor: pointer;
+    }
+    button:hover { filter: brightness(0.95); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nicolas Montejo</h1>
+    <nav>
+     <a href="Taller 2 - Clase 4.html">Inicio</a>
+			<a href="Talle 2 - Habilidades.html">Habilidades</a>
+			<a href="Taller 2 - Contactame.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contáctame</h2>
+    <form action="/enviar" method="post" novalidate>
+      <div>
+        <label for="nombre">Nombre <span aria-hidden="true">*</span></label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name"/>
+      </div>
+
+      <div>
+        <label for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email"/>
+      </div>
+
+      <div>
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué te gustaría hablar?"/>
+      </div>
+
+      <div>
+        <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" name="consentimiento" required />
+          Acepto que se usen mis datos para responder este mensaje.
+        </label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
