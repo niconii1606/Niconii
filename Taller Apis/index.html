@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Usuarios – Consumo de API</title>
+    <meta name="description" content="Taller: página responsiva que consume API pública y muestra usuarios." />
+    <link rel="preconnect" href="https://jsonplaceholder.typicode.com">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1>Usuarios de la API</h1>
+        <p class="subtitle">Datos desde <code>jsonplaceholder.typicode.com</code></p>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section aria-labelledby="users-title" class="users-section">
+        <div class="toolbar">
+          <h2 id="users-title">Listado</h2>
+          <label class="search">
+            <span class="visually-hidden">Buscar por nombre o email</span>
+            <input type="search" id="searchInput" placeholder="Buscar por nombre o email…" autocomplete="off">
+          </label>
+        </div>
+
+        <div id="status" class="status" aria-live="polite" aria-atomic="true"></div>
+        <div id="usersGrid" class="grid" role="list"></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <small>Taller – Consumo de API’s <a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noopener">Nicolas Montejo</a></small>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript container">Esta página requiere JavaScript para cargar los datos.</div>
+    </noscript>
+    <script defer src="index.js"></script>
+  </body>
+</html>
